@@ -240,12 +240,19 @@ def prototype_encdec_state():
 
     state = prototype_state()
 
-    state['target'] = ["/data/lisatmp3/chokyun/mt/vocab.unlimited/bitexts.selected/binarized_text.shuffled.fr.h5"]
-    state['source'] = ["/data/lisatmp3/chokyun/mt/vocab.unlimited/bitexts.selected/binarized_text.shuffled.en.h5"]
-    state['indx_word'] = "/data/lisatmp3/chokyun/mt/vocab.unlimited/bitexts.selected/ivocab.en.pkl"
-    state['indx_word_target'] = "/data/lisatmp3/chokyun/mt/vocab.unlimited/bitexts.selected/ivocab.fr.pkl"
-    state['word_indx'] = "/data/lisatmp3/chokyun/mt/vocab.unlimited/bitexts.selected/vocab.en.pkl"
-    state['word_indx_trgt'] = "/data/lisatmp3/chokyun/mt/vocab.unlimited/bitexts.selected/vocab.fr.pkl"
+    # state['target'] = ["/data/lisatmp3/chokyun/mt/vocab.unlimited/bitexts.selected/binarized_text.shuffled.fr.h5"]
+    # state['source'] = ["/data/lisatmp3/chokyun/mt/vocab.unlimited/bitexts.selected/binarized_text.shuffled.en.h5"]
+    # state['indx_word'] = "/data/lisatmp3/chokyun/mt/vocab.unlimited/bitexts.selected/ivocab.en.pkl"
+    # state['indx_word_target'] = "/data/lisatmp3/chokyun/mt/vocab.unlimited/bitexts.selected/ivocab.fr.pkl"
+    # state['word_indx'] = "/data/lisatmp3/chokyun/mt/vocab.unlimited/bitexts.selected/vocab.en.pkl"
+    # state['word_indx_trgt'] = "/data/lisatmp3/chokyun/mt/vocab.unlimited/bitexts.selected/vocab.fr.pkl"
+
+    state['target'] = ["/Users/kellymarchisio/angec_final/data/binarized_text.fr.shuf.h5"]
+    state['source'] = ["/Users/kellymarchisio/angec_final/data/binarized_text.en.shuf.h5"]
+    state['indx_word'] = "/Users/kellymarchisio/angec_final/data/ivocab.en.pkl"
+    state['indx_word_target'] = "/Users/kellymarchisio/angec_final/data/ivocab.fr.pkl"
+    state['word_indx'] = "/Users/kellymarchisio/angec_final/data/vocab.en.pkl"
+    state['word_indx_trgt'] = "/Users/kellymarchisio/angec_final/data/vocab.fr.pkl"
 
     state['null_sym_source'] = 30000
     state['null_sym_target'] = 30000
