@@ -41,9 +41,9 @@ for i, f in enumerate(infiles):
 
 for i, f in enumerate(outfiles):
     outfiles[i] = tables.open_file(f.name, f.mode)
-    vlarrays_out.append(outfiles[i].createEArray(outfiles[i].root, 'phrases',
+    vlarrays_out.append(outfiles[i].create_earray(outfiles[i].root, 'phrases',
             tables.Int32Atom(),shape=(0,)))
-    indices_out.append(outfiles[i].createTable("/", 'indices', Index, "a table of indices and lengths"))
+    indices_out.append(outfiles[i].create_table("/", 'indices', Index, "a table of indices and lengths"))
 
 data_len = indices_in[0].shape[0]
 print 'Data len:', data_len

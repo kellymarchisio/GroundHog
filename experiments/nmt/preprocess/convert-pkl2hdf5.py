@@ -23,9 +23,9 @@ class Index(tables.IsDescription):
 
 f = args.output
 f = tables.open_file(f.name, f.mode)
-earrays = f.createEArray(f.root, 'phrases', 
+earrays = f.create_earray(f.root, 'phrases', 
     tables.Int32Atom(),shape=(0,))
-indices = f.createTable("/", 'indices', 
+indices = f.create_table("/", 'indices', 
     Index, "a table of indices and lengths")
 
 sfile = open(args.input.name, args.input.mode)
