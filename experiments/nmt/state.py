@@ -254,8 +254,10 @@ def prototype_encdec_state():
     state['word_indx'] = "/Users/kellymarchisio/angec_final/data/vocab.en.pkl"
     state['word_indx_trgt'] = "/Users/kellymarchisio/angec_final/data/vocab.fr.pkl"
 
-    state['null_sym_source'] = 30000
-    state['null_sym_target'] = 30000
+    # state['null_sym_source'] = 30000
+    # state['null_sym_target'] = 30000
+    state['null_sym_source'] = 70
+    state['null_sym_target'] = 70
     state['n_sym_source'] = state['null_sym_source'] + 1
     state['n_sym_target'] = state['null_sym_target'] + 1
 
