@@ -240,12 +240,12 @@ def prototype_encdec_state():
 
     state = prototype_state()
 
-    state['target'] = ["/Users/kellymarchisio/angec_final/data/full-test/binarized_text.fr.shuf.h5"]
-    state['source'] = ["/Users/kellymarchisio/angec_final/data/full-test/binarized_text.en.shuf.h5"]
-    state['indx_word'] = "/Users/kellymarchisio/angec_final/data/full-test/ivocab.en.pkl"
-    state['indx_word_target'] = "/Users/kellymarchisio/angec_final/data/full-test/ivocab.fr.pkl"
-    state['word_indx'] = "/Users/kellymarchisio/angec_final/data/full-test/vocab.en.pkl"
-    state['word_indx_trgt'] = "/Users/kellymarchisio/angec_final/data/full-test/vocab.fr.pkl"
+    state['target'] = ["/Users/kellymarchisio/angec_final/GroundHog/data/full-test/binarized_text.fr.shuf.h5"]
+    state['source'] = ["/Users/kellymarchisio/angec_final/GroundHog/data/full-test/binarized_text.en.shuf.h5"]
+    state['indx_word'] = "/Users/kellymarchisio/angec_final/GroundHog/data/full-test/ivocab.en.pkl"
+    state['indx_word_target'] = "/Users/kellymarchisio/angec_final/GroundHog/data/full-test/ivocab.fr.pkl"
+    state['word_indx'] = "/Users/kellymarchisio/angec_final/GroundHog/data/full-test/vocab.en.pkl"
+    state['word_indx_trgt'] = "/Users/kellymarchisio/angec_final/GroundHog/data/full-test/vocab.fr.pkl"
 
     state['null_sym_source'] = 3000
     state['null_sym_target'] = 3000
