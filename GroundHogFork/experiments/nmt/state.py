@@ -240,12 +240,14 @@ def prototype_encdec_state():
 
     state = prototype_state()
 
-    state['target'] = ["/Users/kellymarchisio/angec_final/GroundHog/data/full-test/binarized_text.fr.shuf.h5"]
-    state['source'] = ["/Users/kellymarchisio/angec_final/GroundHog/data/full-test/binarized_text.en.shuf.h5"]
-    state['indx_word'] = "/Users/kellymarchisio/angec_final/GroundHog/data/full-test/ivocab.en.pkl"
-    state['indx_word_target'] = "/Users/kellymarchisio/angec_final/GroundHog/data/full-test/ivocab.fr.pkl"
-    state['word_indx'] = "/Users/kellymarchisio/angec_final/GroundHog/data/full-test/vocab.en.pkl"
-    state['word_indx_trgt'] = "/Users/kellymarchisio/angec_final/GroundHog/data/full-test/vocab.fr.pkl"
+    data_directory = "/home/kvm23/angec_final/angec/data/full-test/%s"
+
+    state['target'] = [data_directory % "binarized_text.fr.shuf.h5"]
+    state['source'] = [data_directory % "binarized_text.en.shuf.h5"]
+    state['indx_word'] = data_directory % "ivocab.en.pkl"
+    state['indx_word_target'] = data_directory % "ivocab.fr.pkl"
+    state['word_indx'] = data_directory % "vocab.en.pkl"
+    state['word_indx_trgt'] = data_directory % "vocab.fr.pkl"
 
     state['null_sym_source'] = 3000
     state['null_sym_target'] = 3000
