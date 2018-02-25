@@ -1,0 +1,6 @@
+numexpr==2.6.4
+numpy==1.11.0
+scipy==1.0.0
+six==1.11.0
+tables==3.4.2
+Theano==1.0.1+40.g757b4d591.dirty
