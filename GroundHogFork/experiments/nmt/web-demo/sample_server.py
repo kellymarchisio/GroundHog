@@ -37,7 +37,7 @@ class MTReqHandler(BaseHTTPServer.BaseHTTPRequestHandler):
         ignore_unk = False
         beamwidth = 10
         for aa in args:
-            cc = aa.split('=')
+	    cc = aa.split('=')
             if cc[0] == 'source':
                 source_sentence = cc[1]
             if cc[0] == 'ignore_unk':
@@ -130,7 +130,8 @@ def main():
     state.update(eval("dict({})".format(args.changes)))
 
     logging.basicConfig(level=getattr(logging, state['level']), format="%(asctime)s: %(name)s: %(levelname)s: %(message)s")
-
+    # comment out
+    '''
     server_address = ('', args.port)
     httpd = BaseHTTPServer.HTTPServer(server_address, MTReqHandler)
 
@@ -196,7 +197,7 @@ def main():
                 beam_search=beam_search,
                 ignore_unk=args.ignore_unk, normalize=args.normalize,
                 alpha=alpha, verbose=True)
-    '''
+    
 
 if __name__ == "__main__":
     main()
