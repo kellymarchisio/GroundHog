@@ -240,7 +240,10 @@ def prototype_encdec_state():
 
     state = prototype_state()
 
-    data_directory = "/home/kvm23/angec_final/angec/data/full-test/%s"
+    remote = "/home/kvm23/angec_final/angec/data/full-test/%s"
+    local = "/Users/kellymarchisio/angec_final/angec/data/full-test/%s"
+
+    data_directory = local
 
     state['target'] = [data_directory % "binarized_text.fr.shuf.h5"]
     state['source'] = [data_directory % "binarized_text.en.shuf.h5"]
