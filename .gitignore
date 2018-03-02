@@ -39,3 +39,6 @@ nosetests.xml
 *.npz
 *.npy
 *.pkl
+
+# Directories
+/home/kvm23/angec_final/angec/data/bahdanau 
