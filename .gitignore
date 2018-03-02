@@ -41,4 +41,4 @@ nosetests.xml
 *.pkl
 
 # Directories
-/home/kvm23/angec_final/angec/data/bahdanau 
+/home/kvm23/angec_final/angec/data 
