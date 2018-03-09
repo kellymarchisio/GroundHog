@@ -240,10 +240,12 @@ def prototype_encdec_state():
 
     state = prototype_state()
 
-    remote = "/home/kvm23/angec_final/angec/data/full-test/%s"
-    local = "/Users/kellymarchisio/angec_final/angec/data/full-test/%s"
+    remote_test = "/home/kvm23/angec_final/angec/data/full-test/%s"
+    local_test = "/Users/kellymarchisio/angec_final/angec/data/full-test/%s"
+	
+    remote_full = "/home/kvm23/angec_final/angec/data/bahdanau/bitexts.selected/%s"
 
-    data_directory = local
+    data_directory = remote_full
 
     state['target'] = [data_directory % "binarized_text.fr.shuf.h5"]
     state['source'] = [data_directory % "binarized_text.en.shuf.h5"]
@@ -252,8 +254,8 @@ def prototype_encdec_state():
     state['word_indx'] = data_directory % "vocab.en.pkl"
     state['word_indx_trgt'] = data_directory % "vocab.fr.pkl"
 
-    state['null_sym_source'] = 3000
-    state['null_sym_target'] = 3000
+    state['null_sym_source'] = 30000
+    state['null_sym_target'] = 30000
     state['n_sym_source'] = state['null_sym_source'] + 1
     state['n_sym_target'] = state['null_sym_target'] + 1
 
