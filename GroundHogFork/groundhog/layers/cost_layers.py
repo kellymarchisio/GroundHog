@@ -952,7 +952,8 @@ class SoftmaxLayer(CostLayer):
                 print "".join(sen),
             else:
                 for k in xrange(values.shape[0]):
-                    if model.word_indxs[values[k]] == '<eol>':
+		    print model.word_indxs[values[k]],
+		    if model.word_indxs[values[k]] == '<eol>':
                         break
             print
             print

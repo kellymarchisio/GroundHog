@@ -1,0 +1,4 @@
+test/test.bash: line 51: /home/kvm23/angec_final/angec/GroundHogFork/groundhog/experiments/nmt/score.py: No such file or directory
+test/test.bash: line 54: /home/kvm23/angec_final/angec/GroundHogFork/groundhog/experiments/nmt/score.py: No such file or directory
+test/test.bash: line 61: /home/kvm23/angec_final/angec/GroundHogFork/groundhog/experiments/nmt/sample.py: No such file or directory
+test/test.bash: line 64: /home/kvm23/angec_final/angec/GroundHogFork/groundhog/experiments/nmt/sample.py: No such file or directory

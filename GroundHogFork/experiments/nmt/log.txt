@@ -1,0 +1,214 @@
+Traceback (most recent call last):
+  File "GroundHogFork/experiments/nmt/score.py", line 12, in <module>
+    from experiments.nmt import\
+  File "/home/kvm23/angec_final/angec/GroundHogFork/experiments/nmt/__init__.py", line 1, in <module>
+    from encdec import RNNEncoderDecoder
+  File "/home/kvm23/angec_final/angec/GroundHogFork/experiments/nmt/encdec.py", line 7, in <module>
+    import theano
+  File "/home/kvm23/.conda/envs/py27/lib/python2.7/site-packages/Theano-1.0.1+40.g757b4d5.dirty-py2.7.egg/theano/__init__.py", line 88, in <module>
+    from theano.configdefaults import config
+  File "/home/kvm23/.conda/envs/py27/lib/python2.7/site-packages/Theano-1.0.1+40.g757b4d5.dirty-py2.7.egg/theano/configdefaults.py", line 137, in <module>
+    in_c_key=False)
+  File "/home/kvm23/.conda/envs/py27/lib/python2.7/site-packages/Theano-1.0.1+40.g757b4d5.dirty-py2.7.egg/theano/configparser.py", line 287, in AddConfigVar
+    configparam.__get__(root, type(root), delete_key=True)
+  File "/home/kvm23/.conda/envs/py27/lib/python2.7/site-packages/Theano-1.0.1+40.g757b4d5.dirty-py2.7.egg/theano/configparser.py", line 335, in __get__
+    self.__set__(cls, val_str)
+  File "/home/kvm23/.conda/envs/py27/lib/python2.7/site-packages/Theano-1.0.1+40.g757b4d5.dirty-py2.7.egg/theano/configparser.py", line 346, in __set__
+    self.val = self.filter(val)
+  File "/home/kvm23/.conda/envs/py27/lib/python2.7/site-packages/Theano-1.0.1+40.g757b4d5.dirty-py2.7.egg/theano/configdefaults.py", line 116, in filter
+    'You are tring to use the old GPU back-end. '
+ValueError: You are tring to use the old GPU back-end. It was removed from Theano. Use device=cuda* now. See https://github.com/Theano/Theano/wiki/Converting-to-the-new-gpu-back-end%28gpuarray%29 for more information.
+Using cuDNN version 5110 on context None
+Preallocating 9151/11439 Mb (0.800000) on cuda
+Mapped name None to device cuda: Tesla K80 (1E49:00:00.0)
+2018-03-09 13:13:24,535: experiments.nmt.encdec: DEBUG: Create input variables
+2018-03-09 13:13:24,536: experiments.nmt.encdec: DEBUG: Create encoder
+2018-03-09 13:13:24,536: experiments.nmt.encdec: DEBUG: _create_embedding_layers
+/home/kvm23/angec_final/angec/GroundHogFork/groundhog/utils/utils.py:88: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+  return numpy.zeros((sizeX, sizeY), dtype=theano.config.floatX)
+/home/kvm23/.conda/envs/py27/lib/python2.7/site-packages/numpy/core/numeric.py:190: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+  a = empty(shape, dtype, order)
+2018-03-09 13:13:24,648: experiments.nmt.encdec: DEBUG: _create_transition_layers
+2018-03-09 13:13:24,662: experiments.nmt.encdec: DEBUG: _create_inter_level_layers
+2018-03-09 13:13:24,662: experiments.nmt.encdec: DEBUG: _create_representation_layers
+2018-03-09 13:13:24,664: experiments.nmt.encdec: DEBUG: Build encoding computation graph
+2018-03-09 13:13:24,928: experiments.nmt.encdec: DEBUG: Create backward encoder
+2018-03-09 13:13:24,928: experiments.nmt.encdec: DEBUG: _create_embedding_layers
+2018-03-09 13:13:24,944: experiments.nmt.encdec: DEBUG: _create_transition_layers
+2018-03-09 13:13:24,947: experiments.nmt.encdec: DEBUG: _create_inter_level_layers
+2018-03-09 13:13:24,947: experiments.nmt.encdec: DEBUG: _create_representation_layers
+2018-03-09 13:13:24,949: experiments.nmt.encdec: DEBUG: Build backward encoding computation graph
+2018-03-09 13:13:24,984: experiments.nmt.encdec: DEBUG: Create decoder
+2018-03-09 13:13:24,984: experiments.nmt.encdec: DEBUG: _create_embedding_layers
+2018-03-09 13:13:25,001: experiments.nmt.encdec: DEBUG: _create_transition_layers
+2018-03-09 13:13:25,001: experiments.nmt.encdec: DEBUG: RecurrentLayerWithSearch is used
+2018-03-09 13:13:25,268: experiments.nmt.encdec: DEBUG: _create_inter_level_layers
+2018-03-09 13:13:25,269: experiments.nmt.encdec: DEBUG: _create_initialization_layers
+2018-03-09 13:13:25,270: experiments.nmt.encdec: DEBUG: _create_decoding_layers
+2018-03-09 13:13:25,276: experiments.nmt.encdec: DEBUG: _create_readout_layers
+2018-03-09 13:13:25,352: experiments.nmt.encdec: DEBUG: Build log-likelihood computation graph
+2018-03-09 13:13:25,501: groundhog.layers.cost_layers: DEBUG: Get grads
+2018-03-09 13:13:26,144: groundhog.layers.cost_layers: DEBUG: Got grads
+2018-03-09 13:13:26,144: experiments.nmt.encdec: DEBUG: Build sampling computation graph
+2018-03-09 13:13:27,474: experiments.nmt.encdec: DEBUG: Create auxiliary variables
+2018-03-09 13:13:27,474: experiments.nmt.encdec: DEBUG: Compile sampler
+2018-03-09 13:13:38,955: experiments.nmt.encdec: DEBUG: Model params:
+['A_dec_transition_0',
+ 'B_dec_transition_0',
+ 'D_dec_transition_0',
+ 'G_back_enc_transition_0',
+ 'G_dec_transition_0',
+ 'G_enc_transition_0',
+ 'R_back_enc_transition_0',
+ 'R_dec_transition_0',
+ 'R_enc_transition_0',
+ 'W1_dec_deep_softmax',
+ 'W2_dec_deep_softmax',
+ 'W_0_back_enc_input_embdr_0',
+ 'W_0_back_enc_reset_embdr_0',
+ 'W_0_back_enc_update_embdr_0',
+ 'W_0_dec_approx_embdr',
+ 'W_0_dec_dec_inputter_0',
+ 'W_0_dec_dec_reseter_0',
+ 'W_0_dec_dec_updater_0',
+ 'W_0_dec_hid_readout_0',
+ 'W_0_dec_initializer_0',
+ 'W_0_dec_input_embdr_0',
+ 'W_0_dec_prev_readout_0',
+ 'W_0_dec_repr_readout',
+ 'W_0_dec_reset_embdr_0',
+ 'W_0_dec_update_embdr_0',
+ 'W_0_enc_approx_embdr',
+ 'W_0_enc_input_embdr_0',
+ 'W_0_enc_reset_embdr_0',
+ 'W_0_enc_update_embdr_0',
+ 'W_back_enc_transition_0',
+ 'W_dec_transition_0',
+ 'W_enc_transition_0',
+ 'b_0_back_enc_input_embdr_0',
+ 'b_0_dec_approx_embdr',
+ 'b_0_dec_hid_readout_0',
+ 'b_0_dec_initializer_0',
+ 'b_0_dec_input_embdr_0',
+ 'b_0_enc_approx_embdr',
+ 'b_0_enc_input_embdr_0',
+ 'b_dec_deep_softmax']
+2018-03-09 13:13:39,075: groundhog.layers.basic: DEBUG: Loading W1_dec_deep_softmax of (500, 620)
+2018-03-09 13:13:39,250: groundhog.layers.basic: DEBUG: Loading W2_dec_deep_softmax of (620, 30001)
+2018-03-09 13:13:42,625: groundhog.layers.basic: DEBUG: Loading b_dec_deep_softmax of (30001,)
+2018-03-09 13:13:42,665: groundhog.layers.basic: DEBUG: Loading W_0_dec_repr_readout of (2000, 1000)
+2018-03-09 13:13:43,061: groundhog.layers.basic: DEBUG: Loading W_dec_transition_0 of (1000, 1000)
+2018-03-09 13:13:43,270: groundhog.layers.basic: DEBUG: Loading G_dec_transition_0 of (1000, 1000)
+2018-03-09 13:13:43,502: groundhog.layers.basic: DEBUG: Loading R_dec_transition_0 of (1000, 1000)
+2018-03-09 13:13:43,636: groundhog.layers.basic: DEBUG: Loading A_dec_transition_0 of (2000, 1000)
+2018-03-09 13:13:44,107: groundhog.layers.basic: DEBUG: Loading B_dec_transition_0 of (1000, 1000)
+2018-03-09 13:13:44,281: groundhog.layers.basic: DEBUG: Loading D_dec_transition_0 of (1000, 1)
+2018-03-09 13:13:44,283: groundhog.layers.basic: DEBUG: Loading W_0_dec_dec_inputter_0 of (2000, 1000)
+2018-03-09 13:13:44,731: groundhog.layers.basic: DEBUG: Loading W_0_dec_dec_reseter_0 of (2000, 1000)
+2018-03-09 13:13:45,121: groundhog.layers.basic: DEBUG: Loading W_0_dec_dec_updater_0 of (2000, 1000)
+2018-03-09 13:13:45,614: groundhog.layers.basic: DEBUG: Loading W_0_dec_input_embdr_0 of (620, 1000)
+2018-03-09 13:13:45,835: groundhog.layers.basic: DEBUG: Loading b_0_dec_input_embdr_0 of (1000,)
+2018-03-09 13:13:45,861: groundhog.layers.basic: DEBUG: Loading W_0_dec_approx_embdr of (30001, 620)
+2018-03-09 13:13:48,957: groundhog.layers.basic: DEBUG: Loading b_0_dec_approx_embdr of (620,)
+2018-03-09 13:13:48,959: groundhog.layers.basic: DEBUG: Loading W_0_dec_initializer_0 of (1000, 1000)
+2018-03-09 13:13:49,284: groundhog.layers.basic: DEBUG: Loading b_0_dec_initializer_0 of (1000,)
+2018-03-09 13:13:49,285: groundhog.layers.basic: DEBUG: Loading W_enc_transition_0 of (1000, 1000)
+2018-03-09 13:13:49,508: groundhog.layers.basic: DEBUG: Loading G_enc_transition_0 of (1000, 1000)
+2018-03-09 13:13:49,681: groundhog.layers.basic: DEBUG: Loading R_enc_transition_0 of (1000, 1000)
+2018-03-09 13:13:49,862: groundhog.layers.basic: DEBUG: Loading W_0_enc_input_embdr_0 of (620, 1000)
+2018-03-09 13:13:49,988: groundhog.layers.basic: DEBUG: Loading b_0_enc_input_embdr_0 of (1000,)
+2018-03-09 13:13:50,043: groundhog.layers.basic: DEBUG: Loading W_0_enc_approx_embdr of (30001, 620)
+2018-03-09 13:13:55,250: groundhog.layers.basic: DEBUG: Loading b_0_enc_approx_embdr of (620,)
+2018-03-09 13:13:55,252: groundhog.layers.basic: DEBUG: Loading W_0_enc_update_embdr_0 of (620, 1000)
+2018-03-09 13:13:55,473: groundhog.layers.basic: DEBUG: Loading W_0_enc_reset_embdr_0 of (620, 1000)
+2018-03-09 13:13:55,561: groundhog.layers.basic: DEBUG: Loading W_back_enc_transition_0 of (1000, 1000)
+2018-03-09 13:13:55,815: groundhog.layers.basic: DEBUG: Loading G_back_enc_transition_0 of (1000, 1000)
+2018-03-09 13:13:56,004: groundhog.layers.basic: DEBUG: Loading R_back_enc_transition_0 of (1000, 1000)
+2018-03-09 13:13:56,262: groundhog.layers.basic: DEBUG: Loading W_0_back_enc_input_embdr_0 of (620, 1000)
+2018-03-09 13:13:56,468: groundhog.layers.basic: DEBUG: Loading b_0_back_enc_input_embdr_0 of (1000,)
+2018-03-09 13:13:56,469: groundhog.layers.basic: DEBUG: Loading W_0_back_enc_update_embdr_0 of (620, 1000)
+2018-03-09 13:13:56,733: groundhog.layers.basic: DEBUG: Loading W_0_back_enc_reset_embdr_0 of (620, 1000)
+2018-03-09 13:13:56,930: groundhog.layers.basic: DEBUG: Loading W_0_dec_update_embdr_0 of (620, 1000)
+2018-03-09 13:13:57,191: groundhog.layers.basic: DEBUG: Loading W_0_dec_reset_embdr_0 of (620, 1000)
+2018-03-09 13:13:57,412: groundhog.layers.basic: DEBUG: Loading W_0_dec_hid_readout_0 of (1000, 1000)
+2018-03-09 13:13:57,907: groundhog.layers.basic: DEBUG: Loading b_0_dec_hid_readout_0 of (1000,)
+2018-03-09 13:13:57,908: groundhog.layers.basic: DEBUG: Loading W_0_dec_prev_readout_0 of (620, 1000)
+2018-03-09 13:13:58,524: experiments.nmt.encdec: DEBUG: Compile scorer
+2018-03-09 13:14:20,679: __main__: INFO: Scoring phrases
+2018-03-09 13:14:21,380: __main__: DEBUG: 1 batches, 80 samples, 0.00800518989563 per sample; example scores: [ -40.12805176 -126.10454559 -164.67910767  -72.54367828  -47.77262115]
+2018-03-09 13:14:21,885: __main__: DEBUG: 2 batches, 160 samples, 0.00625675022602 per sample; example scores: [-105.80107117 -103.811409   -216.55326843  -35.96474838  -61.95555878]
+2018-03-09 13:14:22,783: __main__: DEBUG: 3 batches, 240 samples, 0.0111610859632 per sample; example scores: [-138.62278748 -117.69931793  -58.01545334  -49.60492325 -159.79098511]
+2018-03-09 13:14:23,517: __main__: DEBUG: 4 batches, 320 samples, 0.00910682678223 per sample; example scores: [-119.90619659   -2.40303516 -131.74806213 -115.524086    -72.78205109]
+2018-03-09 13:14:24,114: __main__: DEBUG: 5 batches, 400 samples, 0.00738950073719 per sample; example scores: [-120.02648163  -30.38645172  -88.00667572  -23.28721237 -310.06768799]
+2018-03-09 13:14:24,532: __main__: DEBUG: 6 batches, 480 samples, 0.00515195131302 per sample; example scores: [ -42.14743042  -56.33705139  -76.20353699  -58.4903717  -104.64329529]
+2018-03-09 13:14:25,148: __main__: DEBUG: 7 batches, 560 samples, 0.00763457417488 per sample; example scores: [ -31.72135735  -47.42546082  -73.17352295  -93.88098907 -174.82354736]
+2018-03-09 13:14:25,719: __main__: DEBUG: 8 batches, 640 samples, 0.00707176029682 per sample; example scores: [ -86.94546509 -157.65475464  -31.00216675 -116.04561615  -58.25239563]
+2018-03-09 13:14:26,456: __main__: DEBUG: 9 batches, 720 samples, 0.00914648771286 per sample; example scores: [-235.58781433  -64.48795319 -152.78271484  -58.05886078 -119.3503952 ]
+2018-03-09 13:14:27,248: __main__: DEBUG: 10 batches, 800 samples, 0.00983378887177 per sample; example scores: [ -25.28475761  -17.37759399   -5.06078243 -155.4793396   -55.40403748]
+2018-03-09 13:14:27,748: __main__: DEBUG: 11 batches, 880 samples, 0.0061892747879 per sample; example scores: [-70.70909882 -54.82431412 -89.53159332 -99.58244324 -72.0036087 ]
+2018-03-09 13:14:28,332: __main__: DEBUG: 12 batches, 960 samples, 0.00722726285458 per sample; example scores: [-132.7252655   -80.77053833  -14.31464386  -62.11100388 -128.3581543 ]
+2018-03-09 13:14:28,805: __main__: DEBUG: 13 batches, 1040 samples, 0.0058500379324 per sample; example scores: [-33.94716263 -64.10411072 -72.28701782 -39.29417801 -65.10542297]
+2018-03-09 13:14:29,268: __main__: DEBUG: 14 batches, 1120 samples, 0.00573678612709 per sample; example scores: [-45.98760223 -18.03594398 -30.16725159 -78.85784149 -38.80316925]
+2018-03-09 13:14:29,680: __main__: DEBUG: 15 batches, 1200 samples, 0.00508921146393 per sample; example scores: [ -40.38025665  -56.3278389  -132.8409729   -11.84049034  -60.12602997]
+2018-03-09 13:14:30,327: __main__: DEBUG: 16 batches, 1280 samples, 0.00803599953651 per sample; example scores: [-111.18527222  -46.4807663   -33.5235672   -38.33427048  -29.98518944]
+2018-03-09 13:14:31,198: __main__: DEBUG: 17 batches, 1360 samples, 0.0108305871487 per sample; example scores: [-82.43731689 -21.33632469 -59.99676514 -39.58751297 -33.92874527]
+2018-03-09 13:14:31,953: __main__: DEBUG: 18 batches, 1440 samples, 0.00936796069145 per sample; example scores: [ -59.11626053 -141.83808899  -94.23741913 -337.27203369  -13.44347954]
+2018-03-09 13:14:32,755: __main__: DEBUG: 19 batches, 1520 samples, 0.00995256304741 per sample; example scores: [ -8.47562504 -62.43972015 -41.33596039 -61.34854507 -20.43317604]
+2018-03-09 13:14:33,542: __main__: DEBUG: 20 batches, 1600 samples, 0.00976472496986 per sample; example scores: [-63.96883011 -75.62715912 -37.05387497 -54.6356926  -14.07950592]
+2018-03-09 13:14:34,193: __main__: DEBUG: 21 batches, 1680 samples, 0.0080609112978 per sample; example scores: [ -11.97664261 -159.58190918 -142.16220093 -128.98861694  -73.42105865]
+2018-03-09 13:14:34,737: __main__: DEBUG: 22 batches, 1760 samples, 0.00674166381359 per sample; example scores: [-50.70446777 -56.44791031 -15.27709866 -54.41809464 -68.68286896]
+2018-03-09 13:14:35,490: __main__: DEBUG: 23 batches, 1840 samples, 0.00934121310711 per sample; example scores: [-35.23553085 -59.12611389 -42.28126144 -37.01584625 -34.61906815]
+2018-03-09 13:14:37,029: __main__: DEBUG: 24 batches, 1920 samples, 0.0191558152437 per sample; example scores: [ -68.36018372  -78.86207581 -138.33462524 -116.61288452  -72.28262329]
+2018-03-09 13:14:38,018: __main__: DEBUG: 25 batches, 2000 samples, 0.0122638851404 per sample; example scores: [-119.38012695  -76.36954498 -114.3133316   -97.02552032  -75.87961578]
+2018-03-09 13:14:38,586: __main__: DEBUG: 26 batches, 2080 samples, 0.00703536272049 per sample; example scores: [-58.74542999 -99.40721893 -76.20212555 -51.83096313 -21.38719749]
+2018-03-09 13:14:39,638: __main__: DEBUG: 27 batches, 2160 samples, 0.0130826860666 per sample; example scores: [-84.94358826 -44.49287415 -67.25961304 -37.50938797 -31.78981018]
+2018-03-09 13:14:40,392: __main__: DEBUG: 28 batches, 2240 samples, 0.00934936404228 per sample; example scores: [-144.68463135 -108.74856567  -73.46144104  -37.15628052  -49.31441879]
+2018-03-09 13:14:42,251: __main__: DEBUG: 29 batches, 2320 samples, 0.0231543749571 per sample; example scores: [-32.79651642 -55.45561218 -47.18655777 -31.70650101 -80.98619843]
+2018-03-09 13:14:42,936: __main__: DEBUG: 30 batches, 2400 samples, 0.00847787559032 per sample; example scores: [-126.79826355  -93.23881531  -82.89246368  -52.36437988  -63.59005737]
+2018-03-09 13:14:43,861: __main__: DEBUG: 31 batches, 2480 samples, 0.0114889740944 per sample; example scores: [-226.10144043  -69.15377808 -147.66362     -30.65947914   -3.09557652]
+2018-03-09 13:14:44,546: __main__: DEBUG: 32 batches, 2560 samples, 0.00848554968834 per sample; example scores: [-105.9148407   -72.19779968  -56.69163132 -171.38700867 -100.36360168]
+2018-03-09 13:14:45,340: __main__: DEBUG: 33 batches, 2640 samples, 0.00984853506088 per sample; example scores: [-117.68741608  -93.05955505  -73.59254456  -74.31054688  -45.25470734]
+2018-03-09 13:14:46,010: __main__: DEBUG: 34 batches, 2720 samples, 0.0083093136549 per sample; example scores: [-73.82730103 -62.12593079 -39.92139053 -65.60350037 -71.22328949]
+2018-03-09 13:14:46,851: __main__: DEBUG: 35 batches, 2800 samples, 0.0104414731264 per sample; example scores: [-109.60838318   -2.65446305  -44.214077    -38.69334412  -40.72881699]
+2018-03-09 13:14:47,455: __main__: DEBUG: 36 batches, 2880 samples, 0.00748964846134 per sample; example scores: [ -4.62463427 -68.65016937 -51.26542282 -45.50787354  -3.36157894]
+2018-03-09 13:14:47,913: __main__: DEBUG: 37 batches, 2960 samples, 0.00566147565842 per sample; example scores: [ -20.39208984  -35.85758209  -16.2003231  -109.48402405 -109.74821472]
+2018-03-09 13:14:48,400: __main__: DEBUG: 38 batches, 3040 samples, 0.00603543817997 per sample; example scores: [-63.01033401 -41.13086319 -35.34157181 -33.98019791 -64.14858246]
+2018-03-09 13:14:49,158: __main__: DEBUG: 39 batches, 3120 samples, 0.00941771268845 per sample; example scores: [-58.72002411 -16.40602684 -31.263134   -74.23750305 -32.5385704 ]
+2018-03-09 13:14:49,787: __main__: DEBUG: 40 batches, 3200 samples, 0.00779906213284 per sample; example scores: [-175.23098755  -32.44079208  -61.91247177  -70.04164886  -91.78038025]
+2018-03-09 13:14:50,376: __main__: DEBUG: 41 batches, 3280 samples, 0.00731399953365 per sample; example scores: [-27.92283249 -41.00692368 -64.07468414 -18.03944016  -7.6967063 ]
+2018-03-09 13:14:50,863: __main__: DEBUG: 42 batches, 3360 samples, 0.00603623688221 per sample; example scores: [-32.8454628  -44.01517487 -20.69499016 -54.58730316  -5.99148607]
+2018-03-09 13:14:51,432: __main__: DEBUG: 43 batches, 3440 samples, 0.00705965161324 per sample; example scores: [-39.54839325 -36.69636917  -6.76379538 -21.67277908 -21.74381065]
+2018-03-09 13:14:52,234: __main__: DEBUG: 44 batches, 3520 samples, 0.00996406078339 per sample; example scores: [-34.11883545 -38.42671585 -37.85557556 -57.54709244 -64.50047302]
+2018-03-09 13:14:52,719: __main__: DEBUG: 45 batches, 3600 samples, 0.00601029992104 per sample; example scores: [-38.15615463 -60.92224503 -67.45844269 -73.59307861 -29.93309593]
+2018-03-09 13:14:53,377: __main__: DEBUG: 46 batches, 3680 samples, 0.00814452469349 per sample; example scores: [ -27.43188477 -112.6537323   -53.50847244  -31.46080971 -104.97255707]
+2018-03-09 13:14:53,965: __main__: DEBUG: 47 batches, 3760 samples, 0.0072934627533 per sample; example scores: [ -54.72987366  -66.36042023 -133.25186157   -5.55919409  -34.22922897]
+2018-03-09 13:14:54,698: __main__: DEBUG: 48 batches, 3840 samples, 0.00910667479038 per sample; example scores: [-100.74401093  -74.62223816 -191.23200989  -39.19835281  -68.73466492]
+2018-03-09 13:14:55,448: __main__: DEBUG: 49 batches, 3920 samples, 0.00931968688965 per sample; example scores: [ -35.57913589 -227.01316833  -77.81058502  -23.91600227  -64.37411499]
+2018-03-09 13:14:55,933: __main__: DEBUG: 50 batches, 4000 samples, 0.00600438714027 per sample; example scores: [-14.50786781 -75.23246002 -20.42586327 -99.23769379 -54.01141739]
+2018-03-09 13:14:56,736: __main__: DEBUG: 51 batches, 4080 samples, 0.00998203754425 per sample; example scores: [-180.63960266  -23.14014435 -101.40691376 -172.63551331  -79.72969055]
+2018-03-09 13:14:57,285: __main__: DEBUG: 52 batches, 4160 samples, 0.0067970007658 per sample; example scores: [-111.20148468  -45.20518875  -91.54940796  -53.07090378  -53.86289215]
+2018-03-09 13:14:57,847: __main__: DEBUG: 53 batches, 4240 samples, 0.00695568621159 per sample; example scores: [ -35.58820343 -106.06635284 -136.61955261 -107.09695435  -53.08217239]
+2018-03-09 13:14:59,167: __main__: DEBUG: 54 batches, 4320 samples, 0.0164214372635 per sample; example scores: [ -49.48107529  -27.33961678  -43.50149918 -102.26554871  -28.10337639]
+2018-03-09 13:15:00,439: __main__: DEBUG: 55 batches, 4400 samples, 0.0158218502998 per sample; example scores: [ -90.89233398  -83.03498077  -30.6262989  -260.47946167 -148.90951538]
+2018-03-09 13:15:01,146: __main__: DEBUG: 56 batches, 4480 samples, 0.00877139866352 per sample; example scores: [ -69.16521454 -141.56648254  -58.6691246   -99.42194366 -138.76629639]
+2018-03-09 13:15:01,700: __main__: DEBUG: 57 batches, 4560 samples, 0.00686547458172 per sample; example scores: [-128.07687378  -48.66466141  -31.00587463  -15.12060165  -10.09941196]
+2018-03-09 13:15:02,077: __main__: DEBUG: 58 batches, 4640 samples, 0.00466232597828 per sample; example scores: [-70.85585785 -52.96679306 -10.89631844 -15.10370922 -75.02560425]
+2018-03-09 13:15:02,646: __main__: DEBUG: 59 batches, 4720 samples, 0.00705528855324 per sample; example scores: [-20.90707397 -27.19169617 -60.00819016 -65.97628784 -62.35704803]
+2018-03-09 13:15:03,209: __main__: DEBUG: 60 batches, 4800 samples, 0.00697462558746 per sample; example scores: [-17.45471954 -31.09633827 -51.40855408 -81.43463135 -59.56127167]
+2018-03-09 13:15:03,712: __main__: DEBUG: 61 batches, 4880 samples, 0.00623984932899 per sample; example scores: [ -67.78098297  -31.83506775  -12.497715    -53.07484818 -167.03912354]
+2018-03-09 13:15:04,247: __main__: DEBUG: 62 batches, 4960 samples, 0.00662762522697 per sample; example scores: [-57.19726562 -43.81279755  -9.0406456  -57.19726562 -33.94730759]
+2018-03-09 13:15:04,706: __main__: DEBUG: 63 batches, 5040 samples, 0.0056823015213 per sample; example scores: [-38.55847549 -37.17367172 -26.59790421 -64.36637115 -54.59471512]
+2018-03-09 13:15:05,259: __main__: DEBUG: 64 batches, 5120 samples, 0.00684736073017 per sample; example scores: [ -31.39860153  -94.75964355  -80.08127594  -33.45616913 -121.2586441 ]
+2018-03-09 13:15:05,903: __main__: DEBUG: 65 batches, 5200 samples, 0.00798586308956 per sample; example scores: [-83.89811707 -55.30119324 -89.95013428 -38.41123199  -8.10402489]
+2018-03-09 13:15:06,606: __main__: DEBUG: 66 batches, 5280 samples, 0.00872949957848 per sample; example scores: [ -15.88279247  -71.39424896  -37.90814972   -5.17534924 -111.08260345]
+2018-03-09 13:15:07,265: __main__: DEBUG: 67 batches, 5360 samples, 0.00817019939423 per sample; example scores: [ -75.79388428  -45.5291748   -95.98448944  -62.78694153 -100.97931671]
+2018-03-09 13:15:07,965: __main__: DEBUG: 68 batches, 5440 samples, 0.0086830496788 per sample; example scores: [ -45.5208931   -38.39835358 -103.00453186  -91.47240448 -135.53587341]
+2018-03-09 13:15:08,497: __main__: DEBUG: 69 batches, 5520 samples, 0.00660116374493 per sample; example scores: [-101.95233154  -92.52300262 -104.4515686   -40.36112976  -21.48401833]
+2018-03-09 13:15:09,497: __main__: DEBUG: 70 batches, 5600 samples, 0.012425199151 per sample; example scores: [-58.54324722 -55.69029617 -19.80193138 -63.3950386  -93.21534729]
+2018-03-09 13:15:10,015: __main__: DEBUG: 71 batches, 5680 samples, 0.00642532706261 per sample; example scores: [-72.23434448 -68.56586456 -30.1632328  -48.38149261 -16.12145424]
+2018-03-09 13:15:10,789: __main__: DEBUG: 72 batches, 5760 samples, 0.00959442555904 per sample; example scores: [-29.57800865 -28.9504528   -3.465137   -72.73271942 -36.06515503]
+2018-03-09 13:15:11,831: __main__: DEBUG: 73 batches, 5840 samples, 0.012952414155 per sample; example scores: [ -55.43982697  -95.92033386  -79.35165405  -78.76585388 -163.4223938 ]
+2018-03-09 13:15:12,672: __main__: DEBUG: 74 batches, 5920 samples, 0.0104458749294 per sample; example scores: [ -76.17684174 -142.4392395   -22.78286362  -22.44271851  -90.8968811 ]
+2018-03-09 13:15:13,389: __main__: DEBUG: 75 batches, 6000 samples, 0.00886085033417 per sample; example scores: [ -40.11391068   -6.86733532 -122.14274597  -70.86581421  -49.07672501]
+2018-03-09 13:15:13,542: __main__: DEBUG: 76 batches, 6003 samples, 0.0509150028229 per sample; example scores: [-13.67095089 -45.52403641 -65.29102325]
+2018-03-09 13:15:13,542: __main__: INFO: Done

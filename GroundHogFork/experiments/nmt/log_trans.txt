@@ -1,0 +1,503 @@
+Using cuDNN version 5110 on context None
+Preallocating 9151/11439 Mb (0.800000) on cuda
+Mapped name None to device cuda: Tesla K80 (1E49:00:00.0)
+2018-03-09 13:25:31,545: experiments.nmt.encdec: DEBUG: Create input variables
+2018-03-09 13:25:31,545: experiments.nmt.encdec: DEBUG: Create encoder
+2018-03-09 13:25:31,545: experiments.nmt.encdec: DEBUG: _create_embedding_layers
+/home/kvm23/angec_final/angec/GroundHogFork/groundhog/utils/utils.py:88: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+  return numpy.zeros((sizeX, sizeY), dtype=theano.config.floatX)
+/home/kvm23/.conda/envs/py27/lib/python2.7/site-packages/numpy/core/numeric.py:190: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+  a = empty(shape, dtype, order)
+2018-03-09 13:25:31,563: experiments.nmt.encdec: DEBUG: _create_transition_layers
+2018-03-09 13:25:31,568: experiments.nmt.encdec: DEBUG: _create_inter_level_layers
+2018-03-09 13:25:31,568: experiments.nmt.encdec: DEBUG: _create_representation_layers
+2018-03-09 13:25:31,571: experiments.nmt.encdec: DEBUG: Build encoding computation graph
+2018-03-09 13:25:31,615: experiments.nmt.encdec: DEBUG: Create backward encoder
+2018-03-09 13:25:31,615: experiments.nmt.encdec: DEBUG: _create_embedding_layers
+2018-03-09 13:25:31,630: experiments.nmt.encdec: DEBUG: _create_transition_layers
+2018-03-09 13:25:31,633: experiments.nmt.encdec: DEBUG: _create_inter_level_layers
+2018-03-09 13:25:31,633: experiments.nmt.encdec: DEBUG: _create_representation_layers
+2018-03-09 13:25:31,638: experiments.nmt.encdec: DEBUG: Build backward encoding computation graph
+2018-03-09 13:25:31,674: experiments.nmt.encdec: DEBUG: Create decoder
+2018-03-09 13:25:31,674: experiments.nmt.encdec: DEBUG: _create_embedding_layers
+2018-03-09 13:25:31,690: experiments.nmt.encdec: DEBUG: _create_transition_layers
+2018-03-09 13:25:31,690: experiments.nmt.encdec: DEBUG: RecurrentLayerWithSearch is used
+2018-03-09 13:25:31,941: experiments.nmt.encdec: DEBUG: _create_inter_level_layers
+2018-03-09 13:25:31,942: experiments.nmt.encdec: DEBUG: _create_initialization_layers
+2018-03-09 13:25:31,943: experiments.nmt.encdec: DEBUG: _create_decoding_layers
+2018-03-09 13:25:31,949: experiments.nmt.encdec: DEBUG: _create_readout_layers
+2018-03-09 13:25:31,968: experiments.nmt.encdec: DEBUG: Build log-likelihood computation graph
+2018-03-09 13:25:32,176: groundhog.layers.cost_layers: DEBUG: Get grads
+2018-03-09 13:25:32,668: groundhog.layers.cost_layers: DEBUG: Got grads
+2018-03-09 13:25:32,668: experiments.nmt.encdec: DEBUG: Build sampling computation graph
+2018-03-09 13:25:33,818: experiments.nmt.encdec: DEBUG: Create auxiliary variables
+2018-03-09 13:25:33,818: experiments.nmt.encdec: DEBUG: Compile sampler
+2018-03-09 13:25:42,381: experiments.nmt.encdec: DEBUG: Model params:
+['A_dec_transition_0',
+ 'B_dec_transition_0',
+ 'D_dec_transition_0',
+ 'G_back_enc_transition_0',
+ 'G_dec_transition_0',
+ 'G_enc_transition_0',
+ 'R_back_enc_transition_0',
+ 'R_dec_transition_0',
+ 'R_enc_transition_0',
+ 'W1_dec_deep_softmax',
+ 'W2_dec_deep_softmax',
+ 'W_0_back_enc_input_embdr_0',
+ 'W_0_back_enc_reset_embdr_0',
+ 'W_0_back_enc_update_embdr_0',
+ 'W_0_dec_approx_embdr',
+ 'W_0_dec_dec_inputter_0',
+ 'W_0_dec_dec_reseter_0',
+ 'W_0_dec_dec_updater_0',
+ 'W_0_dec_hid_readout_0',
+ 'W_0_dec_initializer_0',
+ 'W_0_dec_input_embdr_0',
+ 'W_0_dec_prev_readout_0',
+ 'W_0_dec_repr_readout',
+ 'W_0_dec_reset_embdr_0',
+ 'W_0_dec_update_embdr_0',
+ 'W_0_enc_approx_embdr',
+ 'W_0_enc_input_embdr_0',
+ 'W_0_enc_reset_embdr_0',
+ 'W_0_enc_update_embdr_0',
+ 'W_back_enc_transition_0',
+ 'W_dec_transition_0',
+ 'W_enc_transition_0',
+ 'b_0_back_enc_input_embdr_0',
+ 'b_0_dec_approx_embdr',
+ 'b_0_dec_hid_readout_0',
+ 'b_0_dec_initializer_0',
+ 'b_0_dec_input_embdr_0',
+ 'b_0_enc_approx_embdr',
+ 'b_0_enc_input_embdr_0',
+ 'b_dec_deep_softmax']
+2018-03-09 13:25:42,383: groundhog.layers.basic: DEBUG: Loading W1_dec_deep_softmax of (500, 620)
+2018-03-09 13:25:42,415: groundhog.layers.basic: DEBUG: Loading W2_dec_deep_softmax of (620, 30001)
+2018-03-09 13:25:42,671: groundhog.layers.basic: DEBUG: Loading b_dec_deep_softmax of (30001,)
+2018-03-09 13:25:42,676: groundhog.layers.basic: DEBUG: Loading W_0_dec_repr_readout of (2000, 1000)
+2018-03-09 13:25:42,703: groundhog.layers.basic: DEBUG: Loading W_dec_transition_0 of (1000, 1000)
+2018-03-09 13:25:42,716: groundhog.layers.basic: DEBUG: Loading G_dec_transition_0 of (1000, 1000)
+2018-03-09 13:25:42,729: groundhog.layers.basic: DEBUG: Loading R_dec_transition_0 of (1000, 1000)
+2018-03-09 13:25:42,743: groundhog.layers.basic: DEBUG: Loading A_dec_transition_0 of (2000, 1000)
+2018-03-09 13:25:42,768: groundhog.layers.basic: DEBUG: Loading B_dec_transition_0 of (1000, 1000)
+2018-03-09 13:25:42,780: groundhog.layers.basic: DEBUG: Loading D_dec_transition_0 of (1000, 1)
+2018-03-09 13:25:42,782: groundhog.layers.basic: DEBUG: Loading W_0_dec_dec_inputter_0 of (2000, 1000)
+2018-03-09 13:25:42,808: groundhog.layers.basic: DEBUG: Loading W_0_dec_dec_reseter_0 of (2000, 1000)
+2018-03-09 13:25:42,833: groundhog.layers.basic: DEBUG: Loading W_0_dec_dec_updater_0 of (2000, 1000)
+2018-03-09 13:25:42,858: groundhog.layers.basic: DEBUG: Loading W_0_dec_input_embdr_0 of (620, 1000)
+2018-03-09 13:25:42,866: groundhog.layers.basic: DEBUG: Loading b_0_dec_input_embdr_0 of (1000,)
+2018-03-09 13:25:42,893: groundhog.layers.basic: DEBUG: Loading W_0_dec_approx_embdr of (30001, 620)
+2018-03-09 13:25:43,152: groundhog.layers.basic: DEBUG: Loading b_0_dec_approx_embdr of (620,)
+2018-03-09 13:25:43,154: groundhog.layers.basic: DEBUG: Loading W_0_dec_initializer_0 of (1000, 1000)
+2018-03-09 13:25:43,166: groundhog.layers.basic: DEBUG: Loading b_0_dec_initializer_0 of (1000,)
+2018-03-09 13:25:43,168: groundhog.layers.basic: DEBUG: Loading W_enc_transition_0 of (1000, 1000)
+2018-03-09 13:25:43,181: groundhog.layers.basic: DEBUG: Loading G_enc_transition_0 of (1000, 1000)
+2018-03-09 13:25:43,194: groundhog.layers.basic: DEBUG: Loading R_enc_transition_0 of (1000, 1000)
+2018-03-09 13:25:43,207: groundhog.layers.basic: DEBUG: Loading W_0_enc_input_embdr_0 of (620, 1000)
+2018-03-09 13:25:43,215: groundhog.layers.basic: DEBUG: Loading b_0_enc_input_embdr_0 of (1000,)
+2018-03-09 13:25:43,243: groundhog.layers.basic: DEBUG: Loading W_0_enc_approx_embdr of (30001, 620)
+2018-03-09 13:25:43,507: groundhog.layers.basic: DEBUG: Loading b_0_enc_approx_embdr of (620,)
+2018-03-09 13:25:43,508: groundhog.layers.basic: DEBUG: Loading W_0_enc_update_embdr_0 of (620, 1000)
+2018-03-09 13:25:43,517: groundhog.layers.basic: DEBUG: Loading W_0_enc_reset_embdr_0 of (620, 1000)
+2018-03-09 13:25:43,526: groundhog.layers.basic: DEBUG: Loading W_back_enc_transition_0 of (1000, 1000)
+2018-03-09 13:25:43,540: groundhog.layers.basic: DEBUG: Loading G_back_enc_transition_0 of (1000, 1000)
+2018-03-09 13:25:43,554: groundhog.layers.basic: DEBUG: Loading R_back_enc_transition_0 of (1000, 1000)
+2018-03-09 13:25:43,567: groundhog.layers.basic: DEBUG: Loading W_0_back_enc_input_embdr_0 of (620, 1000)
+2018-03-09 13:25:43,575: groundhog.layers.basic: DEBUG: Loading b_0_back_enc_input_embdr_0 of (1000,)
+2018-03-09 13:25:43,577: groundhog.layers.basic: DEBUG: Loading W_0_back_enc_update_embdr_0 of (620, 1000)
+2018-03-09 13:25:43,585: groundhog.layers.basic: DEBUG: Loading W_0_back_enc_reset_embdr_0 of (620, 1000)
+2018-03-09 13:25:43,593: groundhog.layers.basic: DEBUG: Loading W_0_dec_update_embdr_0 of (620, 1000)
+2018-03-09 13:25:43,602: groundhog.layers.basic: DEBUG: Loading W_0_dec_reset_embdr_0 of (620, 1000)
+2018-03-09 13:25:43,611: groundhog.layers.basic: DEBUG: Loading W_0_dec_hid_readout_0 of (1000, 1000)
+2018-03-09 13:25:43,623: groundhog.layers.basic: DEBUG: Loading b_0_dec_hid_readout_0 of (1000,)
+2018-03-09 13:25:43,625: groundhog.layers.basic: DEBUG: Loading W_0_dec_prev_readout_0 of (620, 1000)
+Traceback (most recent call last):
+  File "GroundHogFork/experiments/nmt/sample.py", line 303, in <module>
+    main()
+  File "GroundHogFork/experiments/nmt/sample.py", line 243, in main
+    beam_search.compile()
+  File "GroundHogFork/experiments/nmt/sample.py", line 44, in compile
+    self.comp_next_probs = self.enc_dec.create_next_probs_computer()
+  File "/home/kvm23/angec_final/angec/GroundHogFork/experiments/nmt/encdec.py", line 1463, in create_next_probs_computer
+    name="next_probs_fn")
+  File "/home/kvm23/.conda/envs/py27/lib/python2.7/site-packages/Theano-1.0.1+40.g757b4d5.dirty-py2.7.egg/theano/compile/function.py", line 317, in function
+    output_keys=output_keys)
+  File "/home/kvm23/.conda/envs/py27/lib/python2.7/site-packages/Theano-1.0.1+40.g757b4d5.dirty-py2.7.egg/theano/compile/pfunc.py", line 486, in pfunc
+    output_keys=output_keys)
+  File "/home/kvm23/.conda/envs/py27/lib/python2.7/site-packages/Theano-1.0.1+40.g757b4d5.dirty-py2.7.egg/theano/compile/function_module.py", line 1839, in orig_function
+    name=name)
+  File "/home/kvm23/.conda/envs/py27/lib/python2.7/site-packages/Theano-1.0.1+40.g757b4d5.dirty-py2.7.egg/theano/compile/function_module.py", line 1474, in __init__
+    self._check_unused_inputs(inputs, outputs, on_unused_input)
+  File "/home/kvm23/.conda/envs/py27/lib/python2.7/site-packages/Theano-1.0.1+40.g757b4d5.dirty-py2.7.egg/theano/compile/function_module.py", line 1627, in _check_unused_inputs
+    i.variable, err_msg))
+theano.compile.function_module.UnusedInputError: theano.function was asked to create a function computing outputs given certain inputs, but the provided input variable at index 1 is not part of the computational graph needed to compute the outputs: step_num.
+To make this error into a warning, you can pass the parameter on_unused_input='warn' to theano.function. To disable it completely, use on_unused_input='ignore'.
+Using cuDNN version 5110 on context None
+Preallocating 9151/11439 Mb (0.800000) on cuda
+Mapped name None to device cuda: Tesla K80 (1E49:00:00.0)
+2018-03-09 13:27:50,943: experiments.nmt.encdec: DEBUG: Create input variables
+2018-03-09 13:27:50,944: experiments.nmt.encdec: DEBUG: Create encoder
+2018-03-09 13:27:50,944: experiments.nmt.encdec: DEBUG: _create_embedding_layers
+/home/kvm23/angec_final/angec/GroundHogFork/groundhog/utils/utils.py:88: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+  return numpy.zeros((sizeX, sizeY), dtype=theano.config.floatX)
+/home/kvm23/.conda/envs/py27/lib/python2.7/site-packages/numpy/core/numeric.py:190: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+  a = empty(shape, dtype, order)
+2018-03-09 13:27:50,962: experiments.nmt.encdec: DEBUG: _create_transition_layers
+2018-03-09 13:27:50,969: experiments.nmt.encdec: DEBUG: _create_inter_level_layers
+2018-03-09 13:27:50,969: experiments.nmt.encdec: DEBUG: _create_representation_layers
+2018-03-09 13:27:50,971: experiments.nmt.encdec: DEBUG: Build encoding computation graph
+2018-03-09 13:27:51,014: experiments.nmt.encdec: DEBUG: Create backward encoder
+2018-03-09 13:27:51,014: experiments.nmt.encdec: DEBUG: _create_embedding_layers
+2018-03-09 13:27:51,030: experiments.nmt.encdec: DEBUG: _create_transition_layers
+2018-03-09 13:27:51,033: experiments.nmt.encdec: DEBUG: _create_inter_level_layers
+2018-03-09 13:27:51,033: experiments.nmt.encdec: DEBUG: _create_representation_layers
+2018-03-09 13:27:51,035: experiments.nmt.encdec: DEBUG: Build backward encoding computation graph
+2018-03-09 13:27:51,072: experiments.nmt.encdec: DEBUG: Create decoder
+2018-03-09 13:27:51,073: experiments.nmt.encdec: DEBUG: _create_embedding_layers
+2018-03-09 13:27:51,088: experiments.nmt.encdec: DEBUG: _create_transition_layers
+2018-03-09 13:27:51,088: experiments.nmt.encdec: DEBUG: RecurrentLayerWithSearch is used
+2018-03-09 13:27:51,340: experiments.nmt.encdec: DEBUG: _create_inter_level_layers
+2018-03-09 13:27:51,340: experiments.nmt.encdec: DEBUG: _create_initialization_layers
+2018-03-09 13:27:51,342: experiments.nmt.encdec: DEBUG: _create_decoding_layers
+2018-03-09 13:27:51,348: experiments.nmt.encdec: DEBUG: _create_readout_layers
+2018-03-09 13:27:51,367: experiments.nmt.encdec: DEBUG: Build log-likelihood computation graph
+2018-03-09 13:27:51,574: groundhog.layers.cost_layers: DEBUG: Get grads
+2018-03-09 13:27:52,062: groundhog.layers.cost_layers: DEBUG: Got grads
+2018-03-09 13:27:52,062: experiments.nmt.encdec: DEBUG: Build sampling computation graph
+2018-03-09 13:27:53,186: experiments.nmt.encdec: DEBUG: Create auxiliary variables
+2018-03-09 13:27:53,187: experiments.nmt.encdec: DEBUG: Compile sampler
+2018-03-09 13:28:01,784: experiments.nmt.encdec: DEBUG: Model params:
+['A_dec_transition_0',
+ 'B_dec_transition_0',
+ 'D_dec_transition_0',
+ 'G_back_enc_transition_0',
+ 'G_dec_transition_0',
+ 'G_enc_transition_0',
+ 'R_back_enc_transition_0',
+ 'R_dec_transition_0',
+ 'R_enc_transition_0',
+ 'W1_dec_deep_softmax',
+ 'W2_dec_deep_softmax',
+ 'W_0_back_enc_input_embdr_0',
+ 'W_0_back_enc_reset_embdr_0',
+ 'W_0_back_enc_update_embdr_0',
+ 'W_0_dec_approx_embdr',
+ 'W_0_dec_dec_inputter_0',
+ 'W_0_dec_dec_reseter_0',
+ 'W_0_dec_dec_updater_0',
+ 'W_0_dec_hid_readout_0',
+ 'W_0_dec_initializer_0',
+ 'W_0_dec_input_embdr_0',
+ 'W_0_dec_prev_readout_0',
+ 'W_0_dec_repr_readout',
+ 'W_0_dec_reset_embdr_0',
+ 'W_0_dec_update_embdr_0',
+ 'W_0_enc_approx_embdr',
+ 'W_0_enc_input_embdr_0',
+ 'W_0_enc_reset_embdr_0',
+ 'W_0_enc_update_embdr_0',
+ 'W_back_enc_transition_0',
+ 'W_dec_transition_0',
+ 'W_enc_transition_0',
+ 'b_0_back_enc_input_embdr_0',
+ 'b_0_dec_approx_embdr',
+ 'b_0_dec_hid_readout_0',
+ 'b_0_dec_initializer_0',
+ 'b_0_dec_input_embdr_0',
+ 'b_0_enc_approx_embdr',
+ 'b_0_enc_input_embdr_0',
+ 'b_dec_deep_softmax']
+2018-03-09 13:28:01,786: groundhog.layers.basic: DEBUG: Loading W1_dec_deep_softmax of (500, 620)
+2018-03-09 13:28:01,819: groundhog.layers.basic: DEBUG: Loading W2_dec_deep_softmax of (620, 30001)
+2018-03-09 13:28:02,076: groundhog.layers.basic: DEBUG: Loading b_dec_deep_softmax of (30001,)
+2018-03-09 13:28:02,081: groundhog.layers.basic: DEBUG: Loading W_0_dec_repr_readout of (2000, 1000)
+2018-03-09 13:28:02,106: groundhog.layers.basic: DEBUG: Loading W_dec_transition_0 of (1000, 1000)
+2018-03-09 13:28:02,119: groundhog.layers.basic: DEBUG: Loading G_dec_transition_0 of (1000, 1000)
+2018-03-09 13:28:02,132: groundhog.layers.basic: DEBUG: Loading R_dec_transition_0 of (1000, 1000)
+2018-03-09 13:28:02,146: groundhog.layers.basic: DEBUG: Loading A_dec_transition_0 of (2000, 1000)
+2018-03-09 13:28:02,171: groundhog.layers.basic: DEBUG: Loading B_dec_transition_0 of (1000, 1000)
+2018-03-09 13:28:02,183: groundhog.layers.basic: DEBUG: Loading D_dec_transition_0 of (1000, 1)
+2018-03-09 13:28:02,185: groundhog.layers.basic: DEBUG: Loading W_0_dec_dec_inputter_0 of (2000, 1000)
+2018-03-09 13:28:02,211: groundhog.layers.basic: DEBUG: Loading W_0_dec_dec_reseter_0 of (2000, 1000)
+2018-03-09 13:28:02,236: groundhog.layers.basic: DEBUG: Loading W_0_dec_dec_updater_0 of (2000, 1000)
+2018-03-09 13:28:02,261: groundhog.layers.basic: DEBUG: Loading W_0_dec_input_embdr_0 of (620, 1000)
+2018-03-09 13:28:02,269: groundhog.layers.basic: DEBUG: Loading b_0_dec_input_embdr_0 of (1000,)
+2018-03-09 13:28:02,297: groundhog.layers.basic: DEBUG: Loading W_0_dec_approx_embdr of (30001, 620)
+2018-03-09 13:28:02,553: groundhog.layers.basic: DEBUG: Loading b_0_dec_approx_embdr of (620,)
+2018-03-09 13:28:02,554: groundhog.layers.basic: DEBUG: Loading W_0_dec_initializer_0 of (1000, 1000)
+2018-03-09 13:28:02,567: groundhog.layers.basic: DEBUG: Loading b_0_dec_initializer_0 of (1000,)
+2018-03-09 13:28:02,569: groundhog.layers.basic: DEBUG: Loading W_enc_transition_0 of (1000, 1000)
+2018-03-09 13:28:02,582: groundhog.layers.basic: DEBUG: Loading G_enc_transition_0 of (1000, 1000)
+2018-03-09 13:28:02,595: groundhog.layers.basic: DEBUG: Loading R_enc_transition_0 of (1000, 1000)
+2018-03-09 13:28:02,608: groundhog.layers.basic: DEBUG: Loading W_0_enc_input_embdr_0 of (620, 1000)
+2018-03-09 13:28:02,616: groundhog.layers.basic: DEBUG: Loading b_0_enc_input_embdr_0 of (1000,)
+2018-03-09 13:28:02,643: groundhog.layers.basic: DEBUG: Loading W_0_enc_approx_embdr of (30001, 620)
+2018-03-09 13:28:02,901: groundhog.layers.basic: DEBUG: Loading b_0_enc_approx_embdr of (620,)
+2018-03-09 13:28:02,903: groundhog.layers.basic: DEBUG: Loading W_0_enc_update_embdr_0 of (620, 1000)
+2018-03-09 13:28:02,912: groundhog.layers.basic: DEBUG: Loading W_0_enc_reset_embdr_0 of (620, 1000)
+2018-03-09 13:28:02,920: groundhog.layers.basic: DEBUG: Loading W_back_enc_transition_0 of (1000, 1000)
+2018-03-09 13:28:02,933: groundhog.layers.basic: DEBUG: Loading G_back_enc_transition_0 of (1000, 1000)
+2018-03-09 13:28:02,947: groundhog.layers.basic: DEBUG: Loading R_back_enc_transition_0 of (1000, 1000)
+2018-03-09 13:28:02,960: groundhog.layers.basic: DEBUG: Loading W_0_back_enc_input_embdr_0 of (620, 1000)
+2018-03-09 13:28:02,968: groundhog.layers.basic: DEBUG: Loading b_0_back_enc_input_embdr_0 of (1000,)
+2018-03-09 13:28:02,969: groundhog.layers.basic: DEBUG: Loading W_0_back_enc_update_embdr_0 of (620, 1000)
+2018-03-09 13:28:02,978: groundhog.layers.basic: DEBUG: Loading W_0_back_enc_reset_embdr_0 of (620, 1000)
+2018-03-09 13:28:02,986: groundhog.layers.basic: DEBUG: Loading W_0_dec_update_embdr_0 of (620, 1000)
+2018-03-09 13:28:02,995: groundhog.layers.basic: DEBUG: Loading W_0_dec_reset_embdr_0 of (620, 1000)
+2018-03-09 13:28:03,004: groundhog.layers.basic: DEBUG: Loading W_0_dec_hid_readout_0 of (1000, 1000)
+2018-03-09 13:28:03,016: groundhog.layers.basic: DEBUG: Loading b_0_dec_hid_readout_0 of (1000,)
+2018-03-09 13:28:03,018: groundhog.layers.basic: DEBUG: Loading W_0_dec_prev_readout_0 of (620, 1000)
+/home/kvm23/angec_final/angec/GroundHogFork/experiments/nmt/encdec.py:1463: UserWarning: theano.function was asked to create a function computing outputs given certain inputs, but the provided input variable at index 1 is not part of the computational graph needed to compute the outputs: step_num.
+To make this warning into an error, you can pass the parameter on_unused_input='raise' to theano.function. To disable it completely, use on_unused_input='ignore'.
+  name="next_probs_fn")
+/home/kvm23/angec_final/angec/GroundHogFork/experiments/nmt/encdec.py:1472: UserWarning: theano.function was asked to create a function computing outputs given certain inputs, but the provided input variable at index 1 is not part of the computational graph needed to compute the outputs: step_num.
+To make this warning into an error, you can pass the parameter on_unused_input='raise' to theano.function. To disable it completely, use on_unused_input='ignore'.
+  name="next_states_fn")
+2018-03-09 13:28:06,420: root: DEBUG: Beam size: 4
+2018-03-09 13:28:29,517: __main__: DEBUG: Current speed is 0.23096601963 per sentence
+2018-03-09 13:28:52,839: __main__: DEBUG: Current speed is 0.232093980312 per sentence
+2018-03-09 13:29:18,186: __main__: DEBUG: Current speed is 0.23922132651 per sentence
+2018-03-09 13:29:44,601: __main__: DEBUG: Current speed is 0.245452632308 per sentence
+2018-03-09 13:30:07,559: __main__: DEBUG: Current speed is 0.242278483868 per sentence
+2018-03-09 13:30:36,296: __main__: DEBUG: Current speed is 0.249793941577 per sentence
+2018-03-09 13:31:04,650: __main__: DEBUG: Current speed is 0.254614291532 per sentence
+2018-03-09 13:31:30,981: __main__: DEBUG: Current speed is 0.255701501071 per sentence
+2018-03-09 13:31:55,419: __main__: DEBUG: Current speed is 0.254443308777 per sentence
+2018-03-09 13:32:18,105: __main__: DEBUG: Current speed is 0.251685282946 per sentence
+2018-03-09 13:32:30,395: __main__: WARNING: Still no translations: try beam size 8
+2018-03-09 13:32:44,828: __main__: DEBUG: Current speed is 0.253097753525 per sentence
+2018-03-09 13:33:01,723: __main__: DEBUG: Current speed is 0.24608578821 per sentence
+2018-03-09 13:33:25,885: __main__: DEBUG: Current speed is 0.245742414548 per sentence
+2018-03-09 13:33:54,102: __main__: DEBUG: Current speed is 0.248344107866 per sentence
+2018-03-09 13:34:01,987: __main__: WARNING: Still no translations: try beam size 8
+2018-03-09 13:34:22,342: __main__: DEBUG: Current speed is 0.250614435991 per sentence
+2018-03-09 13:34:54,765: __main__: DEBUG: Current speed is 0.255215666294 per sentence
+2018-03-09 13:35:23,788: __main__: DEBUG: Current speed is 0.257275210549 per sentence
+2018-03-09 13:35:53,189: __main__: DEBUG: Current speed is 0.259316117764 per sentence
+2018-03-09 13:36:26,689: __main__: DEBUG: Current speed is 0.263299363161 per sentence
+2018-03-09 13:37:03,657: __main__: DEBUG: Current speed is 0.268618652463 per sentence
+2018-03-09 13:37:29,129: __main__: DEBUG: Current speed is 0.267956739494 per sentence
+2018-03-09 13:38:00,515: __main__: DEBUG: Current speed is 0.270043348182 per sentence
+2018-03-09 13:38:36,063: __main__: DEBUG: Current speed is 0.273757860453 per sentence
+2018-03-09 13:39:11,811: __main__: DEBUG: Current speed is 0.277246285379 per sentence
+2018-03-09 13:39:46,154: __main__: DEBUG: Current speed is 0.279893436432 per sentence
+2018-03-09 13:40:18,610: __main__: DEBUG: Current speed is 0.281611537291 per sentence
+2018-03-09 13:40:51,043: __main__: DEBUG: Current speed is 0.283193874094 per sentence
+2018-03-09 13:41:17,627: __main__: DEBUG: Current speed is 0.282574029991 per sentence
+2018-03-09 13:41:33,843: __main__: WARNING: Still no translations: try beam size 8
+2018-03-09 13:41:43,711: __main__: DEBUG: Current speed is 0.281824422376 per sentence
+2018-03-09 13:42:04,982: __main__: DEBUG: Current speed is 0.279520647685 per sentence
+2018-03-09 13:42:26,399: __main__: DEBUG: Current speed is 0.277412430317 per sentence
+2018-03-09 13:42:51,800: __main__: DEBUG: Current speed is 0.276681173146 per sentence
+2018-03-09 13:43:12,886: __main__: DEBUG: Current speed is 0.274686726657 per sentence
+2018-03-09 13:43:31,791: __main__: DEBUG: Current speed is 0.272167868193 per sentence
+2018-03-09 13:43:57,890: __main__: DEBUG: Current speed is 0.27184864739 per sentence
+2018-03-09 13:44:18,697: __main__: DEBUG: Current speed is 0.270076928337 per sentence
+2018-03-09 13:44:42,323: __main__: DEBUG: Current speed is 0.269163077264 per sentence
+2018-03-09 13:45:06,897: __main__: DEBUG: Current speed is 0.26854648107 per sentence
+2018-03-09 13:45:29,571: __main__: DEBUG: Current speed is 0.267474745909 per sentence
+2018-03-09 13:45:48,155: __main__: DEBUG: Current speed is 0.265433636963 per sentence
+2018-03-09 13:46:12,562: __main__: DEBUG: Current speed is 0.264912598308 per sentence
+2018-03-09 13:46:37,206: __main__: DEBUG: Current speed is 0.264472921406 per sentence
+2018-03-09 13:47:05,917: __main__: DEBUG: Current speed is 0.264999375343 per sentence
+2018-03-09 13:47:38,351: __main__: DEBUG: Current speed is 0.266347950426 per sentence
+2018-03-09 13:48:00,548: __main__: DEBUG: Current speed is 0.265361773332 per sentence
+2018-03-09 13:48:23,044: __main__: DEBUG: Current speed is 0.264483558043 per sentence
+2018-03-09 13:48:45,081: __main__: DEBUG: Current speed is 0.263544846799 per sentence
+2018-03-09 13:49:08,397: __main__: DEBUG: Current speed is 0.262911893725 per sentence
+2018-03-09 13:49:30,882: __main__: DEBUG: Current speed is 0.262135033656 per sentence
+2018-03-09 13:49:53,734: __main__: DEBUG: Current speed is 0.261462789583 per sentence
+2018-03-09 13:50:16,747: __main__: DEBUG: Current speed is 0.260848444911 per sentence
+2018-03-09 13:50:42,235: __main__: DEBUG: Current speed is 0.260733597095 per sentence
+2018-03-09 13:51:08,134: __main__: DEBUG: Current speed is 0.260700715848 per sentence
+2018-03-09 13:51:36,706: __main__: DEBUG: Current speed is 0.261164091825 per sentence
+2018-03-09 13:51:57,077: __main__: DEBUG: Current speed is 0.260119406353 per sentence
+2018-03-09 13:52:26,573: __main__: DEBUG: Current speed is 0.260741564461 per sentence
+2018-03-09 13:52:49,670: __main__: DEBUG: Current speed is 0.260219265243 per sentence
+2018-03-09 13:53:25,873: __main__: DEBUG: Current speed is 0.261974728601 per sentence
+2018-03-09 13:53:56,288: __main__: DEBUG: Current speed is 0.262689412044 per sentence
+2018-03-09 13:54:23,469: __main__: DEBUG: Current speed is 0.262841419816 per sentence
+Using cuDNN version 5110 on context None
+Preallocating 9151/11439 Mb (0.800000) on cuda
+Mapped name None to device cuda: Tesla K80 (1E49:00:00.0)
+2018-03-10 09:26:42,851: experiments.nmt.encdec: DEBUG: Create input variables
+2018-03-10 09:26:42,851: experiments.nmt.encdec: DEBUG: Create encoder
+2018-03-10 09:26:42,851: experiments.nmt.encdec: DEBUG: _create_embedding_layers
+/home/kvm23/angec_final/angec/GroundHogFork/groundhog/utils/utils.py:88: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+  return numpy.zeros((sizeX, sizeY), dtype=theano.config.floatX)
+/home/kvm23/.conda/envs/py27/lib/python2.7/site-packages/numpy/core/numeric.py:190: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+  a = empty(shape, dtype, order)
+2018-03-10 09:26:42,870: experiments.nmt.encdec: DEBUG: _create_transition_layers
+2018-03-10 09:26:42,876: experiments.nmt.encdec: DEBUG: _create_inter_level_layers
+2018-03-10 09:26:42,877: experiments.nmt.encdec: DEBUG: _create_representation_layers
+2018-03-10 09:26:42,879: experiments.nmt.encdec: DEBUG: Build encoding computation graph
+2018-03-10 09:26:42,923: experiments.nmt.encdec: DEBUG: Create backward encoder
+2018-03-10 09:26:42,923: experiments.nmt.encdec: DEBUG: _create_embedding_layers
+2018-03-10 09:26:42,938: experiments.nmt.encdec: DEBUG: _create_transition_layers
+2018-03-10 09:26:42,941: experiments.nmt.encdec: DEBUG: _create_inter_level_layers
+2018-03-10 09:26:42,941: experiments.nmt.encdec: DEBUG: _create_representation_layers
+2018-03-10 09:26:42,943: experiments.nmt.encdec: DEBUG: Build backward encoding computation graph
+2018-03-10 09:26:42,979: experiments.nmt.encdec: DEBUG: Create decoder
+2018-03-10 09:26:42,979: experiments.nmt.encdec: DEBUG: _create_embedding_layers
+2018-03-10 09:26:42,995: experiments.nmt.encdec: DEBUG: _create_transition_layers
+2018-03-10 09:26:42,995: experiments.nmt.encdec: DEBUG: RecurrentLayerWithSearch is used
+2018-03-10 09:26:43,247: experiments.nmt.encdec: DEBUG: _create_inter_level_layers
+2018-03-10 09:26:43,248: experiments.nmt.encdec: DEBUG: _create_initialization_layers
+2018-03-10 09:26:43,249: experiments.nmt.encdec: DEBUG: _create_decoding_layers
+2018-03-10 09:26:43,255: experiments.nmt.encdec: DEBUG: _create_readout_layers
+2018-03-10 09:26:43,274: experiments.nmt.encdec: DEBUG: Build log-likelihood computation graph
+2018-03-10 09:26:43,486: groundhog.layers.cost_layers: DEBUG: Get grads
+2018-03-10 09:26:43,979: groundhog.layers.cost_layers: DEBUG: Got grads
+2018-03-10 09:26:43,980: experiments.nmt.encdec: DEBUG: Build sampling computation graph
+2018-03-10 09:26:45,120: experiments.nmt.encdec: DEBUG: Create auxiliary variables
+2018-03-10 09:26:45,121: experiments.nmt.encdec: DEBUG: Compile sampler
+2018-03-10 09:26:53,789: experiments.nmt.encdec: DEBUG: Model params:
+['A_dec_transition_0',
+ 'B_dec_transition_0',
+ 'D_dec_transition_0',
+ 'G_back_enc_transition_0',
+ 'G_dec_transition_0',
+ 'G_enc_transition_0',
+ 'R_back_enc_transition_0',
+ 'R_dec_transition_0',
+ 'R_enc_transition_0',
+ 'W1_dec_deep_softmax',
+ 'W2_dec_deep_softmax',
+ 'W_0_back_enc_input_embdr_0',
+ 'W_0_back_enc_reset_embdr_0',
+ 'W_0_back_enc_update_embdr_0',
+ 'W_0_dec_approx_embdr',
+ 'W_0_dec_dec_inputter_0',
+ 'W_0_dec_dec_reseter_0',
+ 'W_0_dec_dec_updater_0',
+ 'W_0_dec_hid_readout_0',
+ 'W_0_dec_initializer_0',
+ 'W_0_dec_input_embdr_0',
+ 'W_0_dec_prev_readout_0',
+ 'W_0_dec_repr_readout',
+ 'W_0_dec_reset_embdr_0',
+ 'W_0_dec_update_embdr_0',
+ 'W_0_enc_approx_embdr',
+ 'W_0_enc_input_embdr_0',
+ 'W_0_enc_reset_embdr_0',
+ 'W_0_enc_update_embdr_0',
+ 'W_back_enc_transition_0',
+ 'W_dec_transition_0',
+ 'W_enc_transition_0',
+ 'b_0_back_enc_input_embdr_0',
+ 'b_0_dec_approx_embdr',
+ 'b_0_dec_hid_readout_0',
+ 'b_0_dec_initializer_0',
+ 'b_0_dec_input_embdr_0',
+ 'b_0_enc_approx_embdr',
+ 'b_0_enc_input_embdr_0',
+ 'b_dec_deep_softmax']
+2018-03-10 09:26:53,790: groundhog.layers.basic: DEBUG: Loading W1_dec_deep_softmax of (500, 620)
+2018-03-10 09:26:53,823: groundhog.layers.basic: DEBUG: Loading W2_dec_deep_softmax of (620, 30001)
+2018-03-10 09:26:54,083: groundhog.layers.basic: DEBUG: Loading b_dec_deep_softmax of (30001,)
+2018-03-10 09:26:54,088: groundhog.layers.basic: DEBUG: Loading W_0_dec_repr_readout of (2000, 1000)
+2018-03-10 09:26:54,113: groundhog.layers.basic: DEBUG: Loading W_dec_transition_0 of (1000, 1000)
+2018-03-10 09:26:54,127: groundhog.layers.basic: DEBUG: Loading G_dec_transition_0 of (1000, 1000)
+2018-03-10 09:26:54,141: groundhog.layers.basic: DEBUG: Loading R_dec_transition_0 of (1000, 1000)
+2018-03-10 09:26:54,155: groundhog.layers.basic: DEBUG: Loading A_dec_transition_0 of (2000, 1000)
+2018-03-10 09:26:54,181: groundhog.layers.basic: DEBUG: Loading B_dec_transition_0 of (1000, 1000)
+2018-03-10 09:26:54,196: groundhog.layers.basic: DEBUG: Loading D_dec_transition_0 of (1000, 1)
+2018-03-10 09:26:54,198: groundhog.layers.basic: DEBUG: Loading W_0_dec_dec_inputter_0 of (2000, 1000)
+2018-03-10 09:26:54,224: groundhog.layers.basic: DEBUG: Loading W_0_dec_dec_reseter_0 of (2000, 1000)
+2018-03-10 09:26:54,250: groundhog.layers.basic: DEBUG: Loading W_0_dec_dec_updater_0 of (2000, 1000)
+2018-03-10 09:26:54,275: groundhog.layers.basic: DEBUG: Loading W_0_dec_input_embdr_0 of (620, 1000)
+2018-03-10 09:26:54,284: groundhog.layers.basic: DEBUG: Loading b_0_dec_input_embdr_0 of (1000,)
+2018-03-10 09:26:54,312: groundhog.layers.basic: DEBUG: Loading W_0_dec_approx_embdr of (30001, 620)
+2018-03-10 09:26:54,576: groundhog.layers.basic: DEBUG: Loading b_0_dec_approx_embdr of (620,)
+2018-03-10 09:26:54,578: groundhog.layers.basic: DEBUG: Loading W_0_dec_initializer_0 of (1000, 1000)
+2018-03-10 09:26:54,591: groundhog.layers.basic: DEBUG: Loading b_0_dec_initializer_0 of (1000,)
+2018-03-10 09:26:54,592: groundhog.layers.basic: DEBUG: Loading W_enc_transition_0 of (1000, 1000)
+2018-03-10 09:26:54,606: groundhog.layers.basic: DEBUG: Loading G_enc_transition_0 of (1000, 1000)
+2018-03-10 09:26:54,619: groundhog.layers.basic: DEBUG: Loading R_enc_transition_0 of (1000, 1000)
+2018-03-10 09:26:54,633: groundhog.layers.basic: DEBUG: Loading W_0_enc_input_embdr_0 of (620, 1000)
+2018-03-10 09:26:54,641: groundhog.layers.basic: DEBUG: Loading b_0_enc_input_embdr_0 of (1000,)
+2018-03-10 09:26:54,669: groundhog.layers.basic: DEBUG: Loading W_0_enc_approx_embdr of (30001, 620)
+2018-03-10 09:26:54,928: groundhog.layers.basic: DEBUG: Loading b_0_enc_approx_embdr of (620,)
+2018-03-10 09:26:54,929: groundhog.layers.basic: DEBUG: Loading W_0_enc_update_embdr_0 of (620, 1000)
+2018-03-10 09:26:54,938: groundhog.layers.basic: DEBUG: Loading W_0_enc_reset_embdr_0 of (620, 1000)
+2018-03-10 09:26:54,947: groundhog.layers.basic: DEBUG: Loading W_back_enc_transition_0 of (1000, 1000)
+2018-03-10 09:26:54,961: groundhog.layers.basic: DEBUG: Loading G_back_enc_transition_0 of (1000, 1000)
+2018-03-10 09:26:54,975: groundhog.layers.basic: DEBUG: Loading R_back_enc_transition_0 of (1000, 1000)
+2018-03-10 09:26:54,988: groundhog.layers.basic: DEBUG: Loading W_0_back_enc_input_embdr_0 of (620, 1000)
+2018-03-10 09:26:54,996: groundhog.layers.basic: DEBUG: Loading b_0_back_enc_input_embdr_0 of (1000,)
+2018-03-10 09:26:54,997: groundhog.layers.basic: DEBUG: Loading W_0_back_enc_update_embdr_0 of (620, 1000)
+2018-03-10 09:26:55,006: groundhog.layers.basic: DEBUG: Loading W_0_back_enc_reset_embdr_0 of (620, 1000)
+2018-03-10 09:26:55,015: groundhog.layers.basic: DEBUG: Loading W_0_dec_update_embdr_0 of (620, 1000)
+2018-03-10 09:26:55,024: groundhog.layers.basic: DEBUG: Loading W_0_dec_reset_embdr_0 of (620, 1000)
+2018-03-10 09:26:55,032: groundhog.layers.basic: DEBUG: Loading W_0_dec_hid_readout_0 of (1000, 1000)
+2018-03-10 09:26:55,045: groundhog.layers.basic: DEBUG: Loading b_0_dec_hid_readout_0 of (1000,)
+2018-03-10 09:26:55,047: groundhog.layers.basic: DEBUG: Loading W_0_dec_prev_readout_0 of (620, 1000)
+/home/kvm23/angec_final/angec/GroundHogFork/experiments/nmt/encdec.py:1463: UserWarning: theano.function was asked to create a function computing outputs given certain inputs, but the provided input variable at index 1 is not part of the computational graph needed to compute the outputs: step_num.
+To make this warning into an error, you can pass the parameter on_unused_input='raise' to theano.function. To disable it completely, use on_unused_input='ignore'.
+  name="next_probs_fn")
+/home/kvm23/angec_final/angec/GroundHogFork/experiments/nmt/encdec.py:1472: UserWarning: theano.function was asked to create a function computing outputs given certain inputs, but the provided input variable at index 1 is not part of the computational graph needed to compute the outputs: step_num.
+To make this warning into an error, you can pass the parameter on_unused_input='raise' to theano.function. To disable it completely, use on_unused_input='ignore'.
+  name="next_states_fn")
+2018-03-10 09:26:58,273: root: DEBUG: Beam size: 4
+2018-03-10 09:27:19,722: __main__: DEBUG: Current speed is 0.214496791363 per sentence
+2018-03-10 09:27:39,872: __main__: DEBUG: Current speed is 0.207998310328 per sentence
+2018-03-10 09:28:02,563: __main__: DEBUG: Current speed is 0.214302093983 per sentence
+2018-03-10 09:28:26,433: __main__: DEBUG: Current speed is 0.22040116787 per sentence
+2018-03-10 09:28:46,076: __main__: DEBUG: Current speed is 0.215607672215 per sentence
+2018-03-10 09:29:10,642: __main__: DEBUG: Current speed is 0.220615786711 per sentence
+2018-03-10 09:29:34,616: __main__: DEBUG: Current speed is 0.223348527295 per sentence
+2018-03-10 09:29:57,102: __main__: DEBUG: Current speed is 0.223536852598 per sentence
+2018-03-10 09:30:19,160: __main__: DEBUG: Current speed is 0.223207786878 per sentence
+2018-03-10 09:30:39,163: __main__: DEBUG: Current speed is 0.220890334129 per sentence
+2018-03-10 09:30:59,632: __main__: DEBUG: Current speed is 0.219417676492 per sentence
+2018-03-10 09:31:15,005: __main__: DEBUG: Current speed is 0.213943932652 per sentence
+2018-03-10 09:31:34,883: __main__: DEBUG: Current speed is 0.212777215517 per sentence
+2018-03-10 09:31:59,773: __main__: DEBUG: Current speed is 0.21535736646 per sentence
+2018-03-10 09:32:22,697: __main__: DEBUG: Current speed is 0.216282684008 per sentence
+2018-03-10 09:32:49,052: __main__: DEBUG: Current speed is 0.219237461984 per sentence
+2018-03-10 09:33:14,043: __main__: DEBUG: Current speed is 0.221041443628 per sentence
+2018-03-10 09:33:39,764: __main__: DEBUG: Current speed is 0.223051007854 per sentence
+2018-03-10 09:34:06,153: __main__: DEBUG: Current speed is 0.225200422187 per sentence
+2018-03-10 09:34:39,718: __main__: DEBUG: Current speed is 0.230722685099 per sentence
+2018-03-10 09:35:02,874: __main__: DEBUG: Current speed is 0.230762555259 per sentence
+2018-03-10 09:35:31,211: __main__: DEBUG: Current speed is 0.233153980537 per sentence
+2018-03-10 09:36:02,364: __main__: DEBUG: Current speed is 0.23656142919 per sentence
+2018-03-10 09:36:33,443: __main__: DEBUG: Current speed is 0.23965451926 per sentence
+2018-03-10 09:37:03,544: __main__: DEBUG: Current speed is 0.242108663273 per sentence
+2018-03-10 09:37:33,702: __main__: DEBUG: Current speed is 0.244395892712 per sentence
+2018-03-10 09:38:02,407: __main__: DEBUG: Current speed is 0.245975603351 per sentence
+2018-03-10 09:38:26,591: __main__: DEBUG: Current speed is 0.245828088607 per sentence
+2018-03-10 09:38:49,326: __main__: DEBUG: Current speed is 0.245190867967 per sentence
+2018-03-10 09:39:09,286: __main__: DEBUG: Current speed is 0.243671032349 per sentence
+2018-03-10 09:39:29,127: __main__: DEBUG: Current speed is 0.242211107746 per sentence
+2018-03-10 09:39:52,181: __main__: DEBUG: Current speed is 0.241846437827 per sentence
+2018-03-10 09:40:11,331: __main__: DEBUG: Current speed is 0.240320807009 per sentence
+2018-03-10 09:40:28,927: __main__: DEBUG: Current speed is 0.238427820065 per sentence
+2018-03-10 09:40:51,892: __main__: DEBUG: Current speed is 0.238177066326 per sentence
+2018-03-10 09:41:11,073: __main__: DEBUG: Current speed is 0.236888950864 per sentence
+2018-03-10 09:41:32,990: __main__: DEBUG: Current speed is 0.236410129521 per sentence
+2018-03-10 09:41:55,278: __main__: DEBUG: Current speed is 0.236053990565 per sentence
+2018-03-10 09:42:15,004: __main__: DEBUG: Current speed is 0.235059380776 per sentence
+2018-03-10 09:42:31,328: __main__: DEBUG: Current speed is 0.233263845265 per sentence
+2018-03-10 09:42:53,830: __main__: DEBUG: Current speed is 0.23306280956 per sentence
+2018-03-10 09:43:15,905: __main__: DEBUG: Current speed is 0.232769666002 per sentence
+2018-03-10 09:43:41,892: __main__: DEBUG: Current speed is 0.233399799813 per sentence
+2018-03-10 09:44:10,880: __main__: DEBUG: Current speed is 0.23468344683 per sentence
+2018-03-10 09:44:31,565: __main__: DEBUG: Current speed is 0.234065041807 per sentence
+2018-03-10 09:44:51,646: __main__: DEBUG: Current speed is 0.233341978737 per sentence
+2018-03-10 09:45:11,553: __main__: DEBUG: Current speed is 0.232612799584 per sentence
+2018-03-10 09:45:33,080: __main__: DEBUG: Current speed is 0.232251598785 per sentence
+2018-03-10 09:45:52,474: __main__: DEBUG: Current speed is 0.231469619615 per sentence
+2018-03-10 09:46:13,472: __main__: DEBUG: Current speed is 0.231039854813 per sentence
+2018-03-10 09:46:34,580: __main__: DEBUG: Current speed is 0.2306484408 per sentence
+2018-03-10 09:46:57,486: __main__: DEBUG: Current speed is 0.230618044826 per sentence
+2018-03-10 09:47:20,246: __main__: DEBUG: Current speed is 0.230560960005 per sentence
+2018-03-10 09:47:46,615: __main__: DEBUG: Current speed is 0.23117451372 per sentence
+2018-03-10 09:48:04,873: __main__: DEBUG: Current speed is 0.230290920734 per sentence
+2018-03-10 09:48:30,090: __main__: DEBUG: Current speed is 0.230681761461 per sentence
+2018-03-10 09:48:51,269: __main__: DEBUG: Current speed is 0.230350281439 per sentence
+2018-03-10 09:49:23,200: __main__: DEBUG: Current speed is 0.231884134679 per sentence
+2018-03-10 09:49:49,482: __main__: DEBUG: Current speed is 0.232408322237 per sentence
+2018-03-10 09:50:13,186: __main__: DEBUG: Current speed is 0.232485600869 per sentence
